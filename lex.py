@@ -41,9 +41,10 @@ def old():
             last = mot
             verif(mot)
 
-with open("mots.txt") as f:
-    for mot in f:
-        verif(mot.strip())
+for dico in ['mots1.txt', 'mots2.txt']:
+    with open(dico) as f:
+        for mot in f:
+            verif(mot.strip())
 
 for i in range(2, len(lettres) + 1):
     for m in mots:
